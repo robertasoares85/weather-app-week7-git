@@ -2,12 +2,12 @@ function formatDate(timestamp) {
   let date = new Date(timestamp);
   let hours = date.getHours();
   if (hours < 10) {
-    hours = `0 ${hours}`;
+    hours = `0${hours}`;
   }
 
   let minutes = date.getMinutes();
   if (minutes < 10) {
-    minutes = `0 ${minutes}`;
+    minutes = `0${minutes}`;
   }
 
   let days = [
@@ -27,15 +27,7 @@ function formatDate(timestamp) {
 function formatDay(timestamp) {
   let date = new Date(timestamp * 1000);
   let day = date.getDay();
-  let days = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-  ];
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
   return days[day];
 }
@@ -43,15 +35,15 @@ function formatDay(timestamp) {
 function forecastDisplay(response) {
   let forecast = response.data.daily;
 
-  let forecastElement = document.querySelector("#weekly-forecast");
+  let forecastElement = document.querySelector("#forecast");
+
   let forecastHTML = `<div class="row">`;
   forecast.forEach(function (forecastDay, index) {
     if (index < 6) {
       forecastHTML =
         forecastHTML +
         `<div class = "col-2">
-            <div class="weather-forecast-date">
-            ${formatDay(forecastDay.time)}
+            <div class="weather-forecast-date">${formatDay(forecastDay.time)}
             </div>
             <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${
               forecastDay.condition.icon
