@@ -43,14 +43,14 @@ li {
   margin-bottom: 20px;
 }
 .weather-temperature img {
-  margin-right: 10px;
+  margin-right: 20px;
 
   height: 100px;
   width: 100px;
 }
 .weather-temperature strong {
   color: rgb(135, 135, 135);
-  font-size: 64px;
+  font-size: 60px;
   line-height: 1;
   font-weight: 400;
 }
@@ -85,4 +85,13 @@ li {
 
 #temperature {
   font-size: 80px;
+}
+
+.weather-temperature .active {
+  color: rgb(135, 135, 135);
+  cursor: default;
+}
+
+.weather-temperature .active:hover {
+  text-decoration: none;
 }
