@@ -12,7 +12,7 @@
     />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/style.css" />
-    <title>Weather App</title>
+    <title>Roberta's Weather App</title>
   </head>
   <body>
     <div class="container">
@@ -49,14 +49,11 @@
           </div>
           <div class="row">
             <div class="col-6">
-              <div class="d-flex weather-temperature">
-                <img src="" alt="Clear" id="icon" />
-                <div class="float-left"></div>
-                <div>
+              <div class="clearfix weather-temperature">
+                <img src="" alt="Clear" id="icon" class="float-left" />
+                <div class="float-left">
                   <strong id="temperature"></strong>
-                  <span class="units"></span>
-                  <a href="#" id="celsius-link" class="active">°C</a> |
-                  <a href="#" id="fahrenheit-link">°F</a>
+                  <span class="units"> °C</span>
                 </div>
               </div>
             </div>
@@ -70,6 +67,7 @@
           <div class="weather-forecast" id="forecast"></div>
         </div>
       </div>
+
       <small>
         <a
           href="https://github.com/robertasoares85/weather-app-week7-git"
