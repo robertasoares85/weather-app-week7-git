@@ -60,9 +60,6 @@ li {
   top: -34px;
 }
 
-.overview {
-  margin-bottom: 20px;
-}
 .weather-forecast {
   margin-top: 20px;
   text-align: center;
@@ -80,10 +77,6 @@ li {
 
 .weather-forecast-temperatures {
   font-size: 13px;
-}
-
-#temperature {
-  font-size: 80px;
 }
 
 .weather-temperature .active {
